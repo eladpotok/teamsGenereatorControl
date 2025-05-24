@@ -1,0 +1,140 @@
+.feedback-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .feedback-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .feedback-form input,
+  .feedback-form select,
+  .feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .feedback-form input:focus,
+  .feedback-form select:focus,
+  .feedback-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  }
+  
+  .feedback-form button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0078d4;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .feedback-form button:hover {
+    background-color: #005fa3;
+  }
+  
+  .feedback-success,
+  .feedback-error,
+  .feedback-tip {
+    display: block;
+    font-size: 14px;
+    text-align: right;
+  }
+  
+  .feedback-success {
+    color: green;
+  }
+  
+  .feedback-error {
+    color: red;
+  }
+  
+  .feedback-tip {
+    color: #555;
+    font-style: italic;
+  }
+  
+  .feedback-list {
+    margin-top: 30px;
+  }
+  
+  .feedback-entry {
+    padding: 12px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+  }
+  
+  .feedback-entry strong {
+    display: block;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  
+  .feedback-entry span {
+    display: block;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  
+  .feedback-entry p {
+    margin: 0;
+    color: #444;
+    white-space: pre-wrap;
+  }
+  .rating-stars {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: -6px;
+  }
+  
+  .rating-stars .star {
+    margin-right: 5px;
+  }
+  
+  .rating-stars .star.selected {
+    color: gold;
+  }
+  
+
+  .delete-feedback-button {
+    /* position: absolute; */
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+  }

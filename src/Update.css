@@ -1,0 +1,114 @@
+.update-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.update-form input,
+.update-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.update-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.update-form button {
+  align-self: flex-start;
+  background-color: #004c99;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.update-form button:hover {
+  background-color: #003366;
+}
+
+.update-list h3 {
+  margin-bottom: 16px;
+  min-width: 540px;
+}
+
+.update-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  min-width: 540px;
+}
+
+.update-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.update-notes {
+  margin-bottom: 8px;
+  white-space: pre-wrap;
+
+}
+
+.update-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #004c99;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  padding: 0;
+}
+
+.toggle-button:hover {
+  text-decoration: underline;
+}
+
+.delete-button {
+  /* position: absolute; */
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.update-item {
+  position: relative;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.update-preview {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 8px 0;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}

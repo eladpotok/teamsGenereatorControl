@@ -1,0 +1,134 @@
+.profile-container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 30px 24px;
+  background: #fdfdfd;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 20px;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  display: block;
+}
+@keyframes popIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.profile-info h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.profile-role {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  font-size: 1.05rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+.profile-info .icon {
+  margin-right: 6px;
+  color: #888;
+}
+
+.about-section {
+  margin-top: 30px;
+  padding: 20px;
+  text-align: left;
+  background: #f0f7ff;
+  border-left: 5px solid #4facfe;
+  border-radius: 12px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.about-section h4 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.about-section p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.profile-linkedin {
+  display: inline-block;
+  margin-top: 8px;
+  color: #0077b5;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.profile-linkedin:hover {
+  color: #005582;
+  text-decoration: underline;
+}
+.profile-email {
+  display: inline-block;
+  margin-top: 4px;
+  color: #c23a2b;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.profile-email:hover {
+  color: #a22e22;
+  text-decoration: underline;
+}

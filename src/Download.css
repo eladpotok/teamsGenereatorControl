@@ -1,0 +1,60 @@
+.download-container {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f8f9fc;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.download-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.download-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.store-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.store-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  width: 180px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+}
+
+.store-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.store-card.google {
+  border: 2px solid #34a853;
+}
+
+.store-card.apple {
+  border: 2px solid #000;
+}
+
+.store-card.web {
+  border: 2px solid #0077cc;
+}

@@ -1,0 +1,88 @@
+.about-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.about-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #00a86b;
+  font-weight: bold;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  margin: 20px auto 40px;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.about-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+}
+
+.about-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeCardIn 0.6s forwards;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.about-card h3 {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #0077b6;
+}
+
+.about-card .icon {
+  margin-right: 10px;
+  color: #00a86b;
+}
+
+.about-card p, .about-card li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-card ul {
+  padding-left: 20px;
+}
+
+.about-card li {
+  margin-bottom: 10px;
+}
+
+/* Animation delays */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeCardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
