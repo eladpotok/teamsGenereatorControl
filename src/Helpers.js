@@ -25,4 +25,3 @@ export const getFirstTwoSentences = (text) => {
   
     return sentences.slice(0, 2).join('').trim();
   };
-  
