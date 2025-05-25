@@ -1,4 +1,4 @@
-const isLocal =  true
+const isLocal =  false
 
 const realService = 'https://teamsgeneratorwebapi20230420202750.azurewebsites.net'
 const localEnv = "https://localhost:7236"
