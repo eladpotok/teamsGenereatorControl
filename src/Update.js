@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Update.css';
 import { v4 as uuidv4 } from 'uuid';
-import { addUpdate, deleteUpdate, getAllUpdates, PartitionKeyOfUpdates, submitFeedback } from './Server';
+import { addUpdate, deleteUpdate, getAllUpdates, PartitionKeyOfUpdates } from './Server';
 import { getFirstTwoSentences, getTimeAndDate } from './Helpers';
 
 const Update = (props) => {
@@ -10,16 +10,14 @@ const Update = (props) => {
   const [releaseNotes, setReleaseNotes] = useState('');
   const [updates, setUpdates] = useState([]);
   const [submissionStatus, setSubmissionStatus] = useState(null);
-  const [feedbacks, setFeedbacks] = useState({});
-  const [feedbackStatus, setFeedbackStatus] = useState({});
-  const [ratings, setRatings] = useState({});
+  // const [feedbacks, setFeedbacks] = useState({});
+  // const [ratings, setRatings] = useState({});
 
   useEffect(() => {
     const fetchUpdates = async () => {
       const updates = await getAllUpdates();
       setUpdates(updates);
 
-      console.log('Fetched updates:', updates);
     };
 
     fetchUpdates();
@@ -57,9 +55,9 @@ const Update = (props) => {
     setTimeout(() => setSubmissionStatus(null), 3000);
   };
 
-  const handleRatingChange = (index, value) => {
-    setRatings((prev) => ({ ...prev, [index]: value }));
-  };
+  // const handleRatingChange = (index, value) => {
+  //   setRatings((prev) => ({ ...prev, [index]: value }));
+  // };
 
   const toggleShowMore = (index) => {
     setUpdates((prev) =>
@@ -69,39 +67,35 @@ const Update = (props) => {
     );
   };
 
-  const handleFeedbackChange = (index, value) => {
-    setFeedbacks((prev) => ({ ...prev, [index]: value }));
-  };
+  // const handleFeedbackChange = (index, value) => {
+  //   setFeedbacks((prev) => ({ ...prev, [index]: value }));
+  // };
 
-  const handleFeedbackSubmit = async (index, updateId) => {
-    const feedback = feedbacks[index];
-    const rating = ratings[index];
-    if (!feedback && !rating) return;
+  // const handleFeedbackSubmit = async (index, updateId) => {
+  //   const feedback = feedbacks[index];
+  //   const rating = ratings[index];
+  //   if (!feedback && !rating) return;
 
-    const feedbackData = {
-      rating,
-      feedback,
-      partitionKey: updateId,
-      rowKey: uuidv4(),
-      timestamp: new Date().toISOString().split('T')[0],
-    }
+  //   const feedbackData = {
+  //     rating,
+  //     feedback,
+  //     partitionKey: updateId,
+  //     rowKey: uuidv4(),
+  //     timestamp: new Date().toISOString().split('T')[0],
+  //   }
 
-    const success = await submitFeedback(feedbackData);
+  //   const success = await submitFeedback(feedbackData);
 
-    if (success) {
-      // Reload updated feedbacks from server (simplest way)
-      const refreshed = await getAllUpdates();
-      setUpdates(refreshed);
-    }
+  //   if (success) {
+  //     // Reload updated feedbacks from server (simplest way)
+  //     const refreshed = await getAllUpdates();
+  //     setUpdates(refreshed);
+  //   }
 
-    setFeedbackStatus((prev) => ({ ...prev, [index]: success ? 'success' : 'error' }));
-    setFeedbacks((prev) => ({ ...prev, [index]: '' }));
-    setRatings((prev) => ({ ...prev, [index]: 0 }));
+  //   setFeedbacks((prev) => ({ ...prev, [index]: '' }));
+  //   setRatings((prev) => ({ ...prev, [index]: 0 }));
 
-    setTimeout(() => {
-      setFeedbackStatus((prev) => ({ ...prev, [index]: null }));
-    }, 3000);
-  };
+  // };
 
   const handleDeleteUpdate = async (update) => {
     const success = await deleteUpdate(update);

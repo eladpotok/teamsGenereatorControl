@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
+import React, { createContext, useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Updates from "./Update";
 import Profile from "./Profile";
 import "./App.css";
@@ -53,7 +53,6 @@ export function createAboutSection() {
 
 
 function Navbar() {
-  const { user } = useContext(UserContext);
 
   return (
     <nav
@@ -96,13 +95,14 @@ export default function App() {
   // Simulated user context: change isAdmin to false to test non-admin
   const [user, setUser] = useState({ name: "Elad", isAdmin: true });
 
-    useEffect(() => {
-      const isAdmin = localStorage.getItem("isAdmin");
-      if (isAdmin === "true") {
-        setUser({ ...user, isAdmin: true });
-      } else {
-        setUser({ ...user, isAdmin: false });
-      }
+  const isAdmin = localStorage.getItem("isAdmin");
+  useEffect(() => {
+    if (isAdmin === "true") {
+      setUser({ ...user, isAdmin: true });
+    } else {
+      setUser({ ...user, isAdmin: false });
+    }
+    // eslint-disable-next-line
     }, []);
 
   return (

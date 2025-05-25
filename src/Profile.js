@@ -1,6 +1,6 @@
 import React from 'react';
 import './Profile.css';
-import { FaUser, FaEnvelope, FaCogs } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 import ProfileImg from './Assets/profile.jpg'; // Assuming you have a profile image in the Assets folder
 
 const Profile = () => {

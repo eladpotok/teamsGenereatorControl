@@ -5,36 +5,6 @@ import { getAllFeedbacks, getAllUpdates } from "./Server";
 import { getFirstTwoSentences, getTimeAndDate } from "./Helpers";
 import { Link } from "react-router-dom";
 
-const mockFeedback = [
-  {
-    id: 1,
-    user: "John D.",
-    message: "Great app! Helped us a lot organizing our weekly games.",
-    date: "2025-05-20",
-  },
-  {
-    id: 2,
-    user: "Leah M.",
-    message: "Love the new update, especially the match history feature.",
-    date: "2025-05-19",
-  },
-];
-
-const mockUpdates = [
-  {
-    id: 1,
-    title: "New Match History Feature",
-    description: "You can now view all your previous matches in a timeline!",
-    date: "2025-05-18",
-  },
-  {
-    id: 2,
-    title: "Team Balancing Improvements",
-    description: "The team generation algorithm has been upgraded for better fairness.",
-    date: "2025-05-17",
-  },
-];
-
 export default function HomePage() {
   const [feedback, setFeedback] = useState([]);
   const [updates, setUpdates] = useState([]);
@@ -42,10 +12,12 @@ export default function HomePage() {
   useEffect(() => {
       const fetchFeedbacks = async () => {
         const feedbacks = await getAllFeedbacks();
+        if(!feedbacks) return; // Handle case where no feedbacks are returned
         setFeedback(feedbacks.slice(0, 2)); // Get the latest two feedbacks
         };
         const fetchUpdates = async () => {
           const updates = await getAllUpdates();
+          if(!updates) return; // Handle case where no updates are returned
           setUpdates(updates.slice(0, 2)); // Get the latest two updates
         };
         
