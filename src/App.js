@@ -51,8 +51,7 @@ export function createAboutSection() {
   return container;
 }
 
-
-function Navbar() {
+function Navbar(props) {
 
   return (
     <nav
@@ -64,10 +63,11 @@ function Navbar() {
         color: "white",
         alignItems: "center",
         justifyContent: "space-between",
+        flexDirection: 'column'
       }}
     >
       <div style={{ fontWeight: "bold", fontSize: 20 }}>TeamsGenerator</div>
-      <div style={{ display: "flex", gap: "15px" }}>
+      <div className="header-tabs" style={{ display: "flex", gap: "15px" }}>
        <Link to="/homepage" style={{ color: "white", textDecoration: "none" }}>
           Home
         </Link>
@@ -94,6 +94,7 @@ function Navbar() {
 export default function App() {
   // Simulated user context: change isAdmin to false to test non-admin
   const [user, setUser] = useState({ name: "Elad", isAdmin: true });
+  // const location = useLocation();
 
   const isAdmin = localStorage.getItem("isAdmin");
   useEffect(() => {
